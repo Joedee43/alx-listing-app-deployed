@@ -36,7 +36,7 @@ const ReviewSection = ({ propertyId }: { propertyId: string }) => {
       setError(null);
       try {
         // Replace with your actual API endpoint for reviews
-        const response = await fetch(`https://api.example.com/properties/${propertyId}/reviews`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/properties`);
         if (!response.ok) {
           throw new Error("Failed to fetch reviews.");
         }
